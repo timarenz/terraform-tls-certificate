@@ -21,9 +21,9 @@ variable "ca_key" {
   type = string
 }
 
-variable "ca_key_algorithm" {
-  type = string
-}
+# variable "ca_key_algorithm" {
+#   type = string
+# }
 
 variable "organization_name" {
   type = string

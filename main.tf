@@ -18,8 +18,8 @@ resource "tls_cert_request" "certificate" {
 }
 
 resource "tls_locally_signed_cert" "certificate" {
-  cert_request_pem      = tls_cert_request.certificate.cert_request_pem
-  ca_key_algorithm      = var.ca_key_algorithm
+  cert_request_pem = tls_cert_request.certificate.cert_request_pem
+  # ca_key_algorithm      = var.ca_key_algorithm
   ca_private_key_pem    = var.ca_key
   ca_cert_pem           = var.ca_cert
   validity_period_hours = var.validity_period_hours
