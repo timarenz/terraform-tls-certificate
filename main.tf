@@ -5,7 +5,7 @@ resource "tls_private_key" "certificate" {
 }
 
 resource "tls_cert_request" "certificate" {
-  key_algorithm   = tls_private_key.certificate.algorithm
+  # key_algorithm   = tls_private_key.certificate.algorithm
   private_key_pem = tls_private_key.certificate.private_key_pem
 
   dns_names    = var.dns_names == null ? tolist([var.common_name]) : concat(var.dns_names, tolist([var.common_name]))
